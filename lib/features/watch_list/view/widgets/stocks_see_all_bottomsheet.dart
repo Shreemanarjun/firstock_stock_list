@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:firstock_stock_list/features/watch_list/view/widgets/home_stocks_list.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -8,7 +9,10 @@ class StocksSeeAllBottomsheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return <Widget>[
-      "All Stocks".text.xl.extraBold.make().p8().objectTopLeft(),
+      <Widget>[
+        const AutoLeadingButton(),
+        "All Stocks".text.xl.extraBold.make().p8(),
+      ].hStack().objectTopLeft(),
       const HomeStocksList(
         showAllStocks: true,
       ).expand()
