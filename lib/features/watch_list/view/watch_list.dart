@@ -25,8 +25,8 @@ class _WatchListState extends State<WatchList> {
         context: context,
         builder: (context) => const StocksSeeAllBottomsheet(),
         constraints: const BoxConstraints(
-          minWidth: 600,
-          maxHeight: 800,
+          minWidth: 400,
+          maxHeight: 500,
         ),
         useSafeArea: true,
         isDismissible: true,
